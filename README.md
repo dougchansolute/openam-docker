@@ -1,13 +1,13 @@
 # openam-docker
-OpenAM configuration for Docker
+**OpenAM configuration for Docker**
 
-Step 1 : build the image
+**Step 1** : build the image
 docker build -t openam .
 
-Step 2 : run the image
+**Step 2** : run the image
 docker run -d --name openam -p 8080:8080 openam
 
-Notes:
+**Notes:**
 The OpenAM software is configured to bind to 'localhost' so the UI is accessible on
 http://localhost:8080/openam
 
