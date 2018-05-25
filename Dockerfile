@@ -20,9 +20,9 @@ RUN mkdir /tmp/oam-config && cd /tmp/oam-config && \
     wget https://github.com/OpenRock/OpenAM/releases/download/13.0.0/SSOConfiguratorTools-13.0.0.zip && \
     unzip *.zip && \
     cp sampleconfiguration openam-config.properties && \
-    sed -i 's/server1.example.com/localhost/g' openam-config.properties && \
+    sed -i 's/server1.example.com/openam-docker2-test-proj.apps.oscp.aws-gov.solute.us/g' openam-config.properties && \
     sed -i 's@BASE_DIR=/openam@BASE_DIR='"$CATALINA_HOME"'/openam@' openam-config.properties && \
-    sed -i 's/COOKIE_DOMAIN=.example.com/COOKIE_DOMAIN=/' openam-config.properties && \
+    sed -i 's/COOKIE_DOMAIN=.example.com/COOKIE_DOMAIN=.aws-gov.solute.us/' openam-config.properties && \
     sed -i 's/ACCEPT_LICENSES=false/ACCEPT_LICENSES=true/' openam-config.properties && \
     mkdir $CATALINA_HOME/openam && \
     $CATALINA_HOME/bin/startup.sh && \
